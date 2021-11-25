@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messaging WebApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        body{
+    margin: 0 0;
+    padding: 0 0;
+    text-align: center;
+    background: linear-gradient( rgb(255, 255, 255),rgb(88, 88, 88));
+    /* height: 100vh; */
+
+}
+
+.navbar{
+    padding:25px 5%;
+    background: linear-gradient(#bdc3c7,#2c3e50);
+    margin-top: 10px;
+    border: 2px solid black;
+}
+.navbar a{
+    text-decoration: none;
+}
+.title{
+    display: block;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    transition: .8s;
+
+
+}
+.title:hover{
+    transition: .8s;
+    color: whitesmoke;
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.img{
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    margin: auto;
+    
+}
+
+.btn{
+    display: none;
+}
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px 0px;
+}
+.btnlogin{
+    margin: 2% 7%;
+    padding: .8% 3.5%;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(105, 204, 235);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: .8s;
+    text-decoration: none;
+    
+}
+.btnlogin:hover{
+    background: rgb(138, 252, 208);
+    color:black;
+    transition: .8s;
+    border: 2px solid black;
+    
+    
+}
+
+.footer{
+    padding: 20px 50px;
+    color: white;
+    background: black;
+    margin-top: 30px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+.fa{
+    color: white;
+    text-decoration: none;
+    transition: .8s;
+    
+    padding: 20px;
+    
+}
+.fa-facebook:hover{
+    color: blue;
+    transition: .8s;
+    
+}
+.fa-github:hover{
+    color: skyblue;
+    transition: .8s;
+}
+.fa-linkedin:hover{
+    color: aqua;
+    transition: .8s;
+}
+.fa-instagram:hover{
+    color: rgb(255, 0, 106);
+    transition: .8s;
+}
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="">
+        <span class="title">Messaging WebApp</span>
+    </a>
+    </div>
+
+    <div class="slider">
+        <img class="img" id="image" src="https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80">
+        <h2 class="features" id="feat">We are Number One Messaging WebApp</h2>
+        <button class="btn" onclick="next()">></button>
+    </div>
+    <div class="login">
+       <a href="/loggedin" class="btnlogin"> Log In  </a>
+        <a href="/signin" class="btnlogin">Sign Up</a>
+    </div>
+
+    <footer class="footer">
+        All types of Ⓒ copyright of this website is with its owner Aryan Srivastava
+        <div class="social-media">
+            <a href="https://www.facebook.com/aryan.srivastava.3979" target="_b"  class="fa fa-facebook"></a>
+            <a href="https://github.com/aryan-srivastavaa" target="_b" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/aryan-srivastava-5bb7931a5/" target="_b" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/_aryan.srivastava/" target="_b" class="fa fa-instagram"></a>
+        </div>
+     </footer>
+
+    <script>
+        const arr = [
+    {
+        sno: 1,
+        src: "https://images.unsplash.com/photo-1614680376408-81e91ffe3db7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80",
+        feature: "We are Number One Messaging WebApp"
+    },
+    {
+        sno: 2,
+        src: "https://images.unsplash.com/photo-1521931961826-fe48677230a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+        feature: "Privacy/Safety is our first priority"
+    },
+    {
+        sno: 3,
+        src: "https://images.unsplash.com/photo-1581287053822-fd7bf4f4bfec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=777&q=80",
+        feature: "We offer quality UI"
+
+    },
+    {
+        sno: 4,
+        src: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80",
+        feature: "Messages are end to end encrypted"
+    },
+    {
+        sno: 5,
+        src: "https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+        feature: "Login to Continue"
+    }
+
+] ;
+
+
+let a = document.getElementById('image');
+        c= a.attributes;
+        d= c[0].value;
+        
+        
+        let b = document.getElementById('feat');
+        var count = 1;
+        
+        
+        
+        
+        const next = ()=>{
+            if(count<5){b.innerHTML = arr[count].feature;
+                d= arr[count].src;
+                a.setAttribute('src', d);
+                
+                console.log(count);
+              count++;
+            }
+            else if(count=5){
+                b.innerHTML = arr[0].feature;
+                d = arr[0].src;
+                a.setAttribute('src', d);
+                console.log(count);
+                
+                count = 1;
+            }
+            else{}
+           
+        
+         
+        };
+        setInterval(next,3000);
+    </script>
+</body>
+</html>

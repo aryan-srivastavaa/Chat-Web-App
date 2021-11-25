@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Here</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  .app{
+  background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+  height:100%;
+  width:100%;
+  margin: 0 0;
+  padding: 100px 100px;
+  }
+  ul{
+    display:block;
+    width:100%;
+    height:inherit;
+  }
+  ul{
+    list-style-type:none;
+  }
+  li:nth-child(1)
+  {
+    position:absolute;
+    left:10%;
+    height:30px;
+    width:30px;
+    background:rgba(255,255,255,.2);
+  }
+  li:nth-child(2)
+  {
+    position:absolute;
+    left:40%;
+    height:45px;
+    width:45px;
+    background:rgba(192, 236, 105, 0.404);
+  }
+  li:nth-child(3)
+  {
+    position:absolute;
+    left:50%;
+    height:70px;
+    width:70px;
+    background:rgba(243, 132, 132, 0.288);
+  }
+  li:nth-child(4)
+  {
+    position:absolute;
+    left:90%;
+    height:40px;
+    width:40px;
+    background:rgba(121, 211, 158, 0.644);
+  }
+  li:nth-child(5){
+    position:absolute;
+    left:25%;
+    height:100px;
+    width:100px;
+    background:rgba(118, 196, 199, 0.534);
+  }
+  li:nth-child(6){
+    position:absolute;
+    left:65%;
+    height:50px;
+    width:50px;
+    background:rgba(202, 123, 201, 0.603);
+  }
+  li{
+    animation: animate 15s linear 1s infinite;
+  }
+  
+  @keyframes animate{
+    from{
+      transform: translateY(+500%) rotate(180deg)
+    }
+    to{
+      transform: translateY(-100%)
+        rotate(360deg)
+    }
+  }
+
+
+
+
+body{
+    height: 1000px;
+    /* background: linear-gradient(rgb(245, 179, 245),rgb(120, 120, 252)); */
+}
+.h1{
+    margin-bottom: 60px;
+}
+.card{
+    text-align: center;
+    background: linear-gradient(white,rgba(245, 245, 245, 0.884));
+    margin: 0% 33%;
+    padding: 7% 8%;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px grey;
+    min-width: 200px;
+}
+.title{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: bolder;
+font-size: large;
+margin-left: -53%;
+
+}
+.input{
+border: none;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+border-bottom: 2px solid black ;
+background: transparent;
+border-radius: 5px;
+box-shadow:grey;
+width: 90%;
+height: 20px;
+margin: 20px 0px;
+margin-bottom: 30px;
+padding: 14px 6px;
+}
+.btn_login{
+    background: rgb(136, 136, 255);
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .8s;
+    border: 2px solid transparent;
+    padding: 4px 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.btn_login:hover{
+    background: rgb(74, 74, 252);
+    transition: .8s;
+    border:2px solid black;
+    border-radius: 4px;
+}
+.title-social{
+  margin-top: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: bolder;
+font-size: large;
+}
+
+.btn_login_fa{
+  background: transparent;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .8s;
+    border: 2px solid transparent;
+    padding: 4px 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    color: black;
+}
+.btn_login_fa:hover{
+  color: blue;
+  transition: .8s;
+}
+
+
+.btn_login_ga{
+  background: transparent;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .8s;
+    border: 2px solid transparent;
+    padding: 4px 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    color: black;
+}
+.btn_login_ga:hover{
+  color: orange;
+  transition: .8s;
+}
+@media only screen and (max-width: 497px) {
+  body{
+    height: 100vh;
+  }
+  .card{
+    margin: 18% 8%;
+    padding: 30px 10px;
+  }
+  .app{
+    padding: 18% 12%;
+  }
+}
+
+
+
+@media only screen and (min-width:497px) and (max-width: 1000px) {
+  body{
+    height: 100vh;
+  }
+  .card{
+    margin: 2% 16%;
+    
+  }
+}
+    /* body{
+        height: 100%;
+        background: linear-gradient(white,grey);
+    }
+.card{
+    margin: 11% 30%;
+    background: black;
+    text-align: center;
+    padding: 50px 100px;
+    border-radius: 10px ;
+    box-shadow: 3px 6px 7px grey;
+}
+.userdata{
+    margin: 20px 0 ;
+    padding: 4px 4px;
+    width: 70%;
+    min-width: 80px;
+}
+.btn_login{
+    margin: 2% 7%;
+padding: .8% 3.5%;
+font-size: larger;
+font-weight: bolder;
+font-family: Arial, Helvetica, sans-serif;
+background: rgb(105, 204, 235);
+color: white;
+border-radius: 5px;
+border: 2px solid transparent;
+cursor: pointer;
+transition: .8s;
+text-decoration: none;
+}
+.btn_login:hover{
+    background: rgb(138, 252, 208);
+color:black;
+transition: .8s;
+border: 2px solid black;
+} */
+</style>
+</head>
+<body>
+
+    
+<main class="app">
+    <div class="boxes">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h1 class="h1">SignUp</h1>
+        <form action="/signin_credentials" method="POST">
+            <input type="text" name="uname" class="input" placeholder="Choose an UserName" required>
+            <br>
+            <input type="email" name="uemail" class="input" placeholder="Enter Your Email" required>
+            <br>
+            <input type="password" name="upass" class="input" placeholder="Enter a password " required >
+            <br>
+        <button type="submit" class="btn_login">SignUp </button>
+            
+            
+            
+        </form>
+    <!-- <form method="POST" action="/signin_credentials">
+        <div class="card">
+            <input type="text" name="uname" class="userdata" placeholder="Enter UserName" required>
+            <br>
+            <input type="email" name="uemail" class="userdata" placeholder="Enter Email" required>
+            <br>
+            <input type="password" name="upass" class="userdata" placeholder="Enter password" required >
+            <br>
+        <button type="submit" class="btn_login">SignUp </button>
+        </div>
+    </form> -->
+</body>
+</html>
